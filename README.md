@@ -2,6 +2,24 @@
 
 This is for ESP32 DHT11 POST Data to Heroku Server and FireBase(Data Base)
 
+### Link
+* [console](https://github.com/Hsun1031/DHT11Firebase#console)
+* [dht11firebase.js](https://github.com/Hsun1031/DHT11Firebase#dht11firebasejs)
+    * [class Firestore](https://github.com/Hsun1031/DHT11Firebase#class-firestore)
+        * [serviceAccountKey.json](https://github.com/Hsun1031/DHT11Firebase#serviceaccountkeyjson)
+    * [serviceAccountKey.json](https://github.com/Hsun1031/DHT11Firebase#serviceaccountkeyjson)
+        * [Client Json](https://github.com/Hsun1031/DHT11Firebase#client-json)
+        * [Server Json](https://github.com/Hsun1031/DHT11Firebase#server-json)
+    * [async checkIdPasswd(ckeckIdPasswdData)](https://github.com/Hsun1031/DHT11Firebase#async-checkidpasswdckeckidpasswddata)
+        * [Client Json](https://github.com/Hsun1031/DHT11Firebase#client-json-1)
+        * [Server Json](https://github.com/Hsun1031/DHT11Firebase#server-json-1)
+    * [async getDHT11Data(dateData)](https://github.com/Hsun1031/DHT11Firebase#async-getdht11datadatedata)
+        * [Client Json](https://github.com/Hsun1031/DHT11Firebase#client-json-2)
+        * [Server Json](https://github.com/Hsun1031/DHT11Firebase#server-json-2)
+    * [async setDHT11Data(DHT11Data)](https://github.com/Hsun1031/DHT11Firebase#async-setdht11datadht11data)
+        * [Client Json](https://github.com/Hsun1031/DHT11Firebase#client-json-3)
+        * [Server Json](https://github.com/Hsun1031/DHT11Firebase#server-json-3)
+
 ## console
 
 ```
@@ -11,14 +29,6 @@ This is for ESP32 DHT11 POST Data to Heroku Server and FireBase(Data Base)
 ```
 
 ## dht11firebase.js
-
-### Link
-
-* [class Firestore](https://github.com/Hsun1031/DHT11Firebase#class-firestore)
-* [serviceAccountKey.json](https://github.com/Hsun1031/DHT11Firebase#serviceaccountkeyjson)
-* [async checkIdPasswd(ckeckIdPasswdData)](https://github.com/Hsun1031/DHT11Firebase#async-checkidpasswdckeckidpasswddata)
-* [async getDHT11Data(dateData)](https://github.com/Hsun1031/DHT11Firebase#async-getdht11datadatedata)
-* [async setDHT11Data(DHT11Data)](https://github.com/Hsun1031/DHT11Firebase#async-setdht11datadht11data)
 
 ### class Firestore
 
@@ -191,12 +201,12 @@ Type -> OK
     "Data": {
         "Date":  1635523200000,
         "0": {
-            "Temp": [20, 20, 20, 20, 20,20],
-            "Hun":  [50, 50, 50, 50, 50,50],
+            "Temp": [20, 20, 20, 20, 20, 20],
+            "Hun":  [50, 50, 50, 50, 50, 50],
         },
         "1": {
-            "Temp": [20, 20, 20, 20, 20,20],
-            "Hun":  [50, 50, 50, 50, 50,50],
+            "Temp": [20, 20, 20, 20, 20, 20],
+            "Hun":  [50, 50, 50, 50, 50, 50],
         },
         .
         .
@@ -279,8 +289,8 @@ async setDHT11Data(DHT11Data) {
     "Day":   "<Enter Day>",
     "Hour":  "<Enter Hour>",
     "Min":   "<Enter Min>",
-    "Temp":  [20, 20, 20, 20, 20,20],
-    "Hun":   [50, 50, 50, 50, 50,50],
+    "Temp":  [20, 20, 20, 20, 20, 20],
+    "Hun":   [50, 50, 50, 50, 50, 50],
 }
 ```
 
