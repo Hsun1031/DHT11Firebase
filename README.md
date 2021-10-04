@@ -14,11 +14,11 @@ This is for ESP32 DHT11 POST Data to Heroku Server and FireBase(Data Base)
 
 ### Link
 
-* [class Firestore]("#class-firestore")
-* [serviceAccountKey.json](#serviceaccountkeyjson)
-* [async checkIdPasswd(ckeckIdPasswdData)](#async-checkidpasswdckeckidpasswddata)
-* [async getDHT11Data(dateData)](#async-getdht11datadatedata)
-* [async setDHT11Data(DHT11Data)](#async-setdht11datadht11data)
+* [class Firestore](https://github.com/Hsun1031/DHT11Firebase#class-firestore)
+* [serviceAccountKey.json](https://github.com/Hsun1031/DHT11Firebase#serviceaccountkeyjson)
+* [async checkIdPasswd(ckeckIdPasswdData)](https://github.com/Hsun1031/DHT11Firebase#async-checkidpasswdckeckidpasswddata)
+* [async getDHT11Data(dateData)](https://github.com/Hsun1031/DHT11Firebase#async-getdht11datadatedata)
+* [async setDHT11Data(DHT11Data)](https://github.com/Hsun1031/DHT11Firebase#async-setdht11datadht11data)
 
 ### class Firestore
 
