@@ -150,10 +150,10 @@ async getDHT11Data(dateData) {
         }
 
         if(_json.Name !== "getDHT11Data")
-            return getReturnData("GET_TEMP_HUM", "ERROR", "JSON_NAME_ERROR");
+            return getReturnData("GET_DHT11_DATA", "ERROR", "JSON_NAME_ERROR");
 
     } catch(e) {
-        return getReturnData("GET_TEMP_HUM", "ERROR", "JSON_ERROR");
+        return getReturnData("GET_DHT11_DATA", "ERROR", "JSON_ERROR");
     }
 
     try {
@@ -161,15 +161,15 @@ async getDHT11Data(dateData) {
         const doc = await cityRef.get();
 
         if (!doc.exists)
-            return getReturnData("GET_TEMP_HUM", "ERROR", "DATABASE_NOTFOUND_DATA_ERROR");
+            return getReturnData("GET_DHT11_DATA", "ERROR", "DATABASE_NOTFOUND_DATA_ERROR");
 
         
-        let data = getReturnData("GET_TEMP_HUM", "OK", NaN);
+        let data = getReturnData("GET_DHT11_DATA", "OK", NaN);
         data["Data"]    = doc.data()
         return data;
         
     } catch(e) {
-        return getReturnData("GET_TEMP_HUM", "ERROR", "DATABASE_GET_DATA_ERROR");
+        return getReturnData("GET_DHT11_DATA", "ERROR", "DATABASE_GET_DATA_ERROR");
     }
 
 }
@@ -193,7 +193,7 @@ Type -> OK
 
 ```json
 {
-    "Name":  "checkIdPasswd",
+    "Name":  "GET_DHT11_DATA",
     "Type":  "OK",
     "Error":  null,
     "Data": {
@@ -217,7 +217,7 @@ Type -> Error
 
 ```json
 {
-    "Name":  "GET_TEMP_HUM",
+    "Name":  "GET_DHT11_DATA",
     "Type":  "ERROR",
     "Error": "<Error Code>",
 }
@@ -247,10 +247,10 @@ async setDHT11Data(DHT11Data) {
         }
 
         if(_json.Name !== "setDHT11Data")
-            return getReturnData("SET_DHT11", "ERROR", "JSON_NAME_ERROR");
+            return getReturnData("SET_DHT11_DATA", "ERROR", "JSON_NAME_ERROR");
 
     } catch(e) {
-        return getReturnData("SET_DHT11", "ERROR", "JSON_ERROR");
+        return getReturnData("SET_DHT11_DATA", "ERROR", "JSON_ERROR");
     }
 
     try {
@@ -270,10 +270,10 @@ async setDHT11Data(DHT11Data) {
         await myDoc.update(firebaseData);
 
     } catch(e) {
-        return getReturnData("SET_DHT11", "ERROR", "DATABASE_SAVE_DATA_ERROR");
+        return getReturnData("SET_DHT11_DATA", "ERROR", "DATABASE_SAVE_DATA_ERROR");
     }
 
-    return getReturnData("SET_DHT11", "OK", NaN);
+    return getReturnData("SET_DHT11_DATA", "OK", NaN);
 }
 ```
 
@@ -298,7 +298,7 @@ Type -> OK
 
 ```json
 {
-    "Name": "checkIdPasswd",
+    "Name": "SET_DHT11_DATA",
     "Type": "OK",
     "Error": null,
 }
@@ -308,7 +308,7 @@ Type -> Error
 
 ```json
 {
-    "Name":  "SET_DHT11",
+    "Name":  "SET_DHT11_DATA",
     "Type":  "ERROR",
     "Error": "<Error Code>",
 }
