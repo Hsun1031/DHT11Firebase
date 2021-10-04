@@ -12,6 +12,14 @@ This is for ESP32 DHT11 POST Data to Heroku Server and FireBase(Data Base)
 
 ## dht11firebase.js
 
+### Link
+
+* <a src="#class-firestore">class Firestore</a>
+* <a src="#serviceaccountkeyjson">serviceAccountKey.json</a>
+* <a src="#async-checkidpasswdckeckidpasswddata">async checkIdPasswd(ckeckIdPasswdData)</a>
+* <a src="#async-getdht11datadatedata">async getDHT11Data(dateData)</a>
+* <a src="#async-setdht11datadht11data">async setDHT11Data(DHT11Data)</a>
+
 ### class Firestore
 
 ```js
@@ -97,7 +105,7 @@ Type -> OK
 {
     "Name":  "checkIdPasswd",
     "Type":  "OK",
-    "Error":  NULL,
+    "Error":  null,
     "Key":   "XXXXXXXXXXXXXX"
 }
 ```
@@ -176,7 +184,7 @@ Type -> OK
 {
     "Name":  "checkIdPasswd",
     "Type":  "OK",
-    "Error":  NULL,
+    "Error":  null,
     "Data": {
         "Date":  1635523200000,
         "0": {
@@ -279,7 +287,7 @@ Type -> OK
 {
     "Name": "checkIdPasswd",
     "Type": "OK",
-    "Error": NULL,
+    "Error": null,
 }
 ```
 
