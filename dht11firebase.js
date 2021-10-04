@@ -1,4 +1,9 @@
 class Firestore {
+    /**
+     *
+     * const serviceAccount = require("/Enter/your/serviceAccountKey/path/.json");
+     * @param serviceAccount
+     */
     constructor(serviceAccount) {
         const admin = require("firebase-admin");
 
@@ -9,14 +14,19 @@ class Firestore {
         this.db     = admin.firestore();
     }
 
-    async checkIdPasswd(ckeckIdPasswdData) {
+    /**
+     *
+     * @param checkIdPasswdData
+     * @returns {Promise<{}>}
+     */
+    async checkIdPasswd(checkIdPasswdData) {
         let _json;
 
         try {
             _json = {
-                Name:   ckeckIdPasswdData["Name"],
-                Id:     ckeckIdPasswdData["Id"],
-                Passwd: ckeckIdPasswdData["Passwd"],
+                Name:   checkIdPasswdData["Name"],
+                Id:     checkIdPasswdData["Id"],
+                Passwd: checkIdPasswdData["Passwd"],
             };
 
             if(_json.Name !== "checkIdPasswd")
@@ -42,6 +52,11 @@ class Firestore {
         }
     }
 
+    /**
+     *
+     * @param dateData
+     * @returns {Promise<{}>}
+     */
     async getDHT11Data(dateData) {
         let _json;
 
@@ -74,9 +89,13 @@ class Firestore {
         } catch(e) {
             return getReturnData("GET_DHT11_DATA", "ERROR", "DATABASE_GET_DATA_ERROR");
         }
-
     }
 
+    /**
+     *
+     * @param DHT11Data
+     * @returns {Promise<{}>}
+     */
     async setDHT11Data(DHT11Data) {
         let _json;
 
@@ -121,6 +140,14 @@ class Firestore {
     }
 }
 
+/**
+ *
+ * @param db
+ * @param collectionPath
+ * @param docPath
+ * @param data
+ * @returns {Promise<{}>}
+ */
 async function setData(db, collectionPath, docPath, data) {
     try {
         const docRef = db.collection(collectionPath).doc(docPath);
@@ -132,6 +159,13 @@ async function setData(db, collectionPath, docPath, data) {
     return getReturnData("SET_DATA", "OK", NaN);
 }
 
+/**
+ *
+ * @param name
+ * @param type
+ * @param error
+ * @returns {}
+ */
 function getReturnData(name, type, error) {
     let returnData = {};
 

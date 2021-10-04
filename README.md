@@ -60,17 +60,17 @@ constructor(serviceAccount) {
 
 ---
 
-### async checkIdPasswd(ckeckIdPasswdData)
+### async checkIdPasswd(checkIdPasswdData)
 
 ```js
-async checkIdPasswd(ckeckIdPasswdData) {
+async checkIdPasswd(checkIdPasswdData) {
     let _json;
 
     try {
         _json = {
-            Name:   ckeckIdPasswdData["Name"],
-            Id:     ckeckIdPasswdData["Id"],
-            Passwd: ckeckIdPasswdData["Passwd"],
+            Name:   checkIdPasswdData["Name"],
+            Id:     checkIdPasswdData["Id"],
+            Passwd: checkIdPasswdData["Passwd"],
         };
 
         if(_json.Name !== "checkIdPasswd")
@@ -125,7 +125,7 @@ Type -> Error
 {
     "Name":  "checkIdPasswd",
     "Type":  "ERROR",
-    "Error": "<Error Code>",
+    "Error": "<Error Code>"
 }
 ```
 
@@ -200,13 +200,13 @@ Type -> OK
         "Date":  1635523200000,
         "0": {
             "Temp": [20, 20, 20, 20, 20, 20],
-            "Hun":  [50, 50, 50, 50, 50, 50],
+            "Hun":  [50, 50, 50, 50, 50, 50]
         },
         "1": {
             "Temp": [20, 20, 20, 20, 20, 20],
-            "Hun":  [50, 50, 50, 50, 50, 50],
+            "Hun":  [50, 50, 50, 50, 50, 50]
         },
-        //...
+        ...
     }
 }
 ```
@@ -217,7 +217,7 @@ Type -> Error
 {
     "Name":  "GET_DHT11_DATA",
     "Type":  "ERROR",
-    "Error": "<Error Code>",
+    "Error": "<Error Code>"
 }
 ```
 
@@ -286,7 +286,7 @@ async setDHT11Data(DHT11Data) {
     "Hour":     13,
     "Min":       5,
     "Temp":    [20, 20, 20, 20, 20, 20],
-    "Hun":     [50, 50, 50, 50, 50, 50],
+    "Hun":     [50, 50, 50, 50, 50, 50]
 }
 ```
 
@@ -298,7 +298,7 @@ Type -> OK
 {
     "Name": "SET_DHT11_DATA",
     "Type": "OK",
-    "Error": null,
+    "Error": null
 }
 ```
 
@@ -308,7 +308,7 @@ Type -> Error
 {
     "Name":  "SET_DHT11_DATA",
     "Type":  "ERROR",
-    "Error": "<Error Code>",
+    "Error": "<Error Code>"
 }
 ```
 
