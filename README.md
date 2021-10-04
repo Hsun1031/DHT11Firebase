@@ -37,19 +37,20 @@ constructor(serviceAccount) {
 
 ```json
 {
-    "type": "service_account",
-    "project_id": "tXXt-7XXX6",
-    "private_key_id": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "private_key": "-----BEGIN PRIVATE KEY-----\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----END PRIVATE KEY-----\n",
-    "client_email": "firebase-adminsdk-7pgpu@XXXXXXXXXXXXXXX.iam.gserviceaccount.com",
-    "client_id": "000000000000000000000000000",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.iam.gserviceaccount.com"
+    "type":                         "service_account",
+    "project_id":                   "tXXt-7XXX6",
+    "private_key_id":               "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "private_key":                  "-----BEGIN PRIVATE KEY-----\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----END PRIVATE KEY-----\n",
+    "client_email":                 "firebase-adminsdk-7pgpu@XXXXXXXXXXXXXXX.iam.gserviceaccount.com",
+    "client_id":                    "000000000000000000000000000",
+    "auth_uri":                     "https://accounts.google.com/o/oauth2/auth",
+    "token_uri":                    "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url":  "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url":         "https://www.googleapis.com/robot/v1/metadata/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.iam.gserviceaccount.com"
   }
 ```
 
+---
 
 ### async checkIdPasswd(ckeckIdPasswdData)
 
@@ -124,6 +125,8 @@ Type -> Error
 * JSON_ERROR
 * ID_OR_PASSWD_ERROR
 * DATABASE_WHERE_ERROR
+
+---
 
 ### async getDHT11Data(dateData)
 
@@ -216,6 +219,8 @@ Type -> Error
 * JSON_ERROR
 * DATABASE_NOTFOUND_DATA_ERROR
 * DATABASE_GET_DATA_ERROR
+
+---
 
 ### async setDHT11Data(DHT11Data)
 
