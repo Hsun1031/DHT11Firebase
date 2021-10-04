@@ -176,14 +176,14 @@ async getDHT11Data(dateData) {
 ```
 
 #### Client Json
-
+2021/10/01 13:05
 ```json
 {
     "Name":  "getDHT11Data",
-    "Year":  "<Enter Year>",
-    "Month": "<Enter Month>",
-    "Day":   "<Enter Day>",
-    "Hour":  "<Enter Hour>"
+    "Year":   2021,
+    "Month":    10,
+    "Day":       1,
+    "Hour":     13
 }
 ```
 
@@ -206,9 +206,7 @@ Type -> OK
             "Temp": [20, 20, 20, 20, 20, 20],
             "Hun":  [50, 50, 50, 50, 50, 50],
         },
-        .
-        .
-        .
+        //...
     }
 }
 ```
@@ -278,17 +276,17 @@ async setDHT11Data(DHT11Data) {
 ```
 
 #### Client Json
-
+2021/10/01 13:05
 ```json
 {
     "Name":  "setDHT11Data",
-    "Year":  "<Enter Year>",
-    "Month": "<Enter Month>",
-    "Day":   "<Enter Day>",
-    "Hour":  "<Enter Hour>",
-    "Min":   "<Enter Min>",
-    "Temp":  [20, 20, 20, 20, 20, 20],
-    "Hun":   [50, 50, 50, 50, 50, 50],
+    "Year":   2021,
+    "Month":    10,
+    "Day":       1,
+    "Hour":     13,
+    "Min":       5,
+    "Temp":    [20, 20, 20, 20, 20, 20],
+    "Hun":     [50, 50, 50, 50, 50, 50],
 }
 ```
 
