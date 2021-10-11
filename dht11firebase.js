@@ -61,10 +61,10 @@ class Firestore {
         let _json;
 
         try {
-            let date  = new Date(dateData["Year"], dateData["Month"], dateData["Day"], dateData["Hour"]);
+            let date  = DHT11Data["Year"] + "-" + DHT11Data["Month"] + "-" + DHT11Data["Day"] + "-" + DHT11Data["Hour"];
             _json = {
                 Name:   dateData["Name"],
-                Date:   date.getTime(),
+                Date:   date,
             }
 
             if(_json.Name !== "getDHT11Data")
@@ -75,7 +75,7 @@ class Firestore {
         }
 
         try {
-            const cityRef = this.db.collection("DHT11").doc(_json.Date.toString());
+            const cityRef = this.db.collection("DHT11").doc(_json.Date);
             const doc = await cityRef.get();
 
             if (!doc.exists)
@@ -100,10 +100,10 @@ class Firestore {
         let _json;
 
         try {
-            let date  = new Date(DHT11Data["Year"], DHT11Data["Month"], DHT11Data["Day"], DHT11Data["Hour"]);
+            let date  = DHT11Data["Year"] + "-" + DHT11Data["Month"] + "-" + DHT11Data["Day"] + "-" + DHT11Data["Hour"];
             _json = {
                 Name:   DHT11Data["Name"],
-                Date:   date.getTime(),
+                Date:   date,
                 Min:    DHT11Data["Min"],
                 Temp:   DHT11Data["Temp"],
                 Hum:    DHT11Data["Hum"]
@@ -123,7 +123,7 @@ class Firestore {
                 Hum:  _json.Hum,
             };
 
-            const myDoc = this.db.collection("DHT11").doc(_json.Date.toString());
+            const myDoc = this.db.collection("DHT11").doc(_json.Date);
             const doc = await myDoc.get();
 
             if (!doc.exists) {
