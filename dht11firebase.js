@@ -61,7 +61,7 @@ class Firestore {
         let _json;
 
         try {
-            let date  = DHT11Data["Year"] + "-" + DHT11Data["Month"] + "-" + DHT11Data["Day"] + "-" + DHT11Data["Hour"];
+            let date  = dateData["Year"] + "-" + dateData["Month"] + "-" + dateData["Day"] + "-" + dateData["Hour"];
             _json = {
                 Name:   dateData["Name"],
                 Date:   date,
